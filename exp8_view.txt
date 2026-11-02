@@ -1,0 +1,4 @@
+sudo mysql -u exampleuser -p
+
+USE exampledb;
+SELECT * FROM Sensorstats;
