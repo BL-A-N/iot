@@ -12,6 +12,20 @@ GPIO.setup(relay2, GPIO.OUT, initial=GPIO.LOW)
 
 try:
     while True:
+        GPIO.output(relay1,True)
+        GPIO.output(relay2,True)
+        time.sleep(2)
+        GPIO.output(relay1,True)
+        GPIO.output(relay2,False)
+        time.sleep(1)
+        GPIO.output(relay1,False)
+        GPIO.output(relay2,True)
+        time.sleep(2)
+        GPIO.output(relay1,True)
+        GPIO.output(relay2,False)
+        time.sleep(1)
+        GPIO.output(relay1,False)
+        GPIO.output(relay2,True)
               
 except KeyboardInterrupt:
     GPIO.cleanup()
